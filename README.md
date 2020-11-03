@@ -2,7 +2,7 @@
 
 ## Versions
 
-| Angular| inav-web-v2|
+| Angular| Dining Philosophers|
 | ------|:------:| 
 | >=10.0.0 | v1.0.0 |
 | >=9.0.0 <10.0.0 | v1.0.0 |
