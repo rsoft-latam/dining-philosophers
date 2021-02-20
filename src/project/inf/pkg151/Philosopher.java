@@ -83,6 +83,11 @@ class Philosopher extends Thread {
             this.getSleep(1000);
 
         }
+        
+        this.showMessage("sleeping");
+        S.setIcon(new ImageIcon(getClass().getResource("/Images/red.JPG")));
+        I.setIcon(new ImageIcon(getClass().getResource("/Images/sleep.gif")));
+        
     }
 
     public void showMessage(String x) {
