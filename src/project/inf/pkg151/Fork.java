@@ -1,5 +1,10 @@
 package project.inf.pkg151;
 
+import static java.lang.Thread.sleep;
+
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 public class Fork {
     private int valor = 1;
 

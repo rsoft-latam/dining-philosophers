@@ -4,18 +4,11 @@ import javax.swing.ImageIcon;
 
 import project.inf.pkg151.Fork;
 
-public class DiningPhilosophers extends javax.swing.JFrame {
+public class PhilosophersApp extends javax.swing.JFrame {
 
-    public DiningPhilosophers() {
+    public PhilosophersApp() {
         initComponents();
-
         F.setIcon(new ImageIcon(getClass().getResource("/Images/background.JPG")));
-
-        I1.setIcon(new ImageIcon(getClass().getResource("/Images/think.gif")));
-        I2.setIcon(new ImageIcon(getClass().getResource("/Images/think.gif")));
-        I3.setIcon(new ImageIcon(getClass().getResource("/Images/think.gif")));
-        I4.setIcon(new ImageIcon(getClass().getResource("/Images/think.gif")));
-        I5.setIcon(new ImageIcon(getClass().getResource("/Images/think.gif")));
     }
 
     /**
@@ -73,8 +66,8 @@ public class DiningPhilosophers extends javax.swing.JFrame {
         E13.setText(".");
         getContentPane().add(E13, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 660, 140, 40));
 
-        B1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        B1.setText("Start");
+        B1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        B1.setText("START");
         B1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 B1ActionPerformed(evt);
@@ -187,11 +180,11 @@ public class DiningPhilosophers extends javax.swing.JFrame {
         Fork fork4 = new Fork();
         Fork fork5 = new Fork();
 
-        PhilosopherLeft p1 = new PhilosopherLeft(fork2, fork1, 1, E11, E12, E13, I1, S1);
-        PhilosopherRight p2 = new PhilosopherRight(fork3, fork2, 2, E21, E22, E23, I2, S2);
-        PhilosopherLeft p3 = new PhilosopherLeft(fork4, fork3, 3, E31, E32, E33, I3, S3);
-        PhilosopherRight p4 = new PhilosopherRight(fork5, fork4, 4, E41, E42, E43, I4, S4);
-        PhilosopherLeft p5 = new PhilosopherLeft(fork1, fork5, 5, E51, E52, E53, I5, S5);
+        Philosopher p1 = new Philosopher(fork1, fork2, "left", E11, E12, E13, I1, S1);
+        Philosopher p2 = new Philosopher(fork2, fork3, "right", E21, E22, E23, I2, S2);
+        Philosopher p3 = new Philosopher(fork3, fork4, "left", E31, E32, E33, I3, S3);
+        Philosopher p4 = new Philosopher(fork4, fork5, "right", E41, E42, E43, I4, S4);
+        Philosopher p5 = new Philosopher(fork5, fork1, "left", E51, E52, E53, I5, S5);
 
         p1.start();
         p2.start();
@@ -204,7 +197,7 @@ public class DiningPhilosophers extends javax.swing.JFrame {
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new DiningPhilosophers().setVisible(true);
+                new PhilosophersApp().setVisible(true);
             }
         });
     }
