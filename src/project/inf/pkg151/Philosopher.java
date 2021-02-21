@@ -1,13 +1,9 @@
 package project.inf.pkg151;
 
-import static java.lang.Thread.sleep;
-
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
-
-import project.inf.pkg151.Fork;
 
 class Philosopher extends Thread {
 
@@ -83,11 +79,11 @@ class Philosopher extends Thread {
             this.getSleep(1000);
 
         }
-        
+
         this.showMessage("sleeping");
         S.setIcon(new ImageIcon(getClass().getResource("/Images/red.JPG")));
         I.setIcon(new ImageIcon(getClass().getResource("/Images/sleep.gif")));
-        
+
     }
 
     public void showMessage(String x) {
