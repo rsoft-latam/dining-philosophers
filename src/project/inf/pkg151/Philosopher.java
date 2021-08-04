@@ -10,6 +10,7 @@ class Philosopher extends Thread {
     private String firstForkText;
     private String secondForkText;
 
+
     private Fork firstFork;
     private Fork secondFork;
 
